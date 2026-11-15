@@ -58,48 +58,48 @@ const processedList = computed(() => {
     <div class="table-responsive">
       <table class="table table-hover align-middle mb-0">
         <thead>
-        <tr>
-          <th>#</th>
-          <th class="sortable-header" @click="toggleSort('name')">
-            Name
-            <span class="sort-icon">
+          <tr>
+            <th>#</th>
+            <th class="sortable-header" @click="toggleSort('name')">
+              Name
+              <span class="sort-icon">
                 {{ sortField === 'name' ? (sortOrder === 'asc' ? '▲' : '▼') : '↕' }}
               </span>
-          </th>
-          <th class="sortable-header" @click="toggleSort('dob')">
-            Date of Birth
-            <span class="sort-icon">
+            </th>
+            <th class="sortable-header" @click="toggleSort('dob')">
+              Date of Birth
+              <span class="sort-icon">
                 {{ sortField === 'dob' ? (sortOrder === 'asc' ? '▲' : '▼') : '↕' }}
               </span>
-          </th>
-          <th>Email</th>
-          <th>Phone number</th>
-          <th class="text-end">Actions</th>
-        </tr>
+            </th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th class="text-end">Actions</th>
+          </tr>
         </thead>
         <tbody>
-        <tr v-if="processedList.length === 0">
-          <td colspan="6" class="text-center py-4 text-muted">
-            Учасників не знайдено
-          </td>
-        </tr>
-        <tr v-for="(item, index) in processedList" :key="item.id">
-          <td>{{ index + 1 }}</td>
-          <td class="fw-semibold">{{ item.name }}</td>
-          <td>{{ item.dob }}</td>
-          <td>{{ item.email }}</td>
-          <td>{{ item.phone }}</td>
-          <td class="text-end">
-            <div class="action-buttons">
-              <BaseButton variant="secondary" @click="$emit('edit', item)">
-                Редагувати
-              </BaseButton>
-              <BaseButton variant="danger" @click="$emit('delete', item)">
-                Видалити
-              </BaseButton>
-            </div>
-          </td>
-        </tr>
+          <tr v-if="processedList.length === 0">
+            <td colspan="6" class="text-center py-4 text-muted">
+              Учасників не знайдено
+            </td>
+          </tr>
+          <tr v-for="(item, index) in processedList" :key="item.id">
+            <td>{{ index + 1 }}</td>
+            <td class="fw-semibold">{{ item.name }}</td>
+            <td>{{ item.dob }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
+            <td class="text-end">
+              <div class="action-buttons">
+                <BaseButton variant="secondary" @click="$emit('edit', item)">
+                  Редагувати
+                </BaseButton>
+                <BaseButton variant="danger" @click="$emit('delete', item)">
+                  Видалити
+                </BaseButton>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

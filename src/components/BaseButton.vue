@@ -18,10 +18,10 @@ defineEmits<{
 
 <template>
   <button
-      :type="type"
-      :disabled="disabled"
-      :class="['custom-btn', `btn-${variant}`, { 'is-disabled': disabled }]"
-      @click="$emit('click', $event)"
+    :type="type"
+    :disabled="disabled"
+    :class="['custom-btn', `btn-${variant}`, { 'is-disabled': disabled }]"
+    @click="$emit('click', $event)"
   >
     <slot />
   </button>

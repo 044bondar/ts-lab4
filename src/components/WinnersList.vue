@@ -22,17 +22,17 @@ defineEmits<{
       <span class="block-title">Winners</span>
       <div class="badges-list">
         <WinnerBadge
-            v-for="winner in winners"
-            :key="winner.id"
-            :winner="winner"
-            @remove="$emit('remove-winner', $event)"
+          v-for="winner in winners"
+          :key="winner.id"
+          :winner="winner"
+          @remove="$emit('remove-winner', $event)"
         />
       </div>
     </div>
     <BaseButton
-        variant="primary"
-        :disabled="!canPickWinner"
-        @click="$emit('pick-winner')"
+      variant="primary"
+      :disabled="!canPickWinner"
+      @click="$emit('pick-winner')"
     >
       New winner
     </BaseButton>

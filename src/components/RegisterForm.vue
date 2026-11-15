@@ -132,38 +132,38 @@ const isPhoneValid = computed(() => isSubmitted.value && !errors.phone && formDa
 
     <form @submit.prevent="handleSubmit">
       <BaseInput
-          v-model="formData.name"
-          label="Name"
-          placeholder="Enter user name"
-          :error-message="errors.name"
-          :is-valid="isNameValid"
+        v-model="formData.name"
+        label="Name"
+        placeholder="Enter user name"
+        :error-message="errors.name"
+        :is-valid="isNameValid"
       />
 
       <BaseInput
-          v-model="formData.dob"
-          label="Date of Birth"
-          type="date"
-          placeholder="yyyy-mm-dd"
-          :error-message="errors.dob"
-          :is-valid="isDobValid"
+        v-model="formData.dob"
+        label="Date of Birth"
+        type="date"
+        placeholder="yyyy-mm-dd"
+        :error-message="errors.dob"
+        :is-valid="isDobValid"
       />
 
       <BaseInput
-          v-model="formData.email"
-          label="Email"
-          type="email"
-          placeholder="Enter email"
-          :error-message="errors.email"
-          :is-valid="isEmailValid"
+        v-model="formData.email"
+        label="Email"
+        type="email"
+        placeholder="Enter email"
+        :error-message="errors.email"
+        :is-valid="isEmailValid"
       />
 
       <BaseInput
-          v-model="formData.phone"
-          label="Phone number"
-          type="tel"
-          placeholder="Enter Phone number (+380...)"
-          :error-message="errors.phone"
-          :is-valid="isPhoneValid"
+        v-model="formData.phone"
+        label="Phone number"
+        type="tel"
+        placeholder="Enter Phone number (+380...)"
+        :error-message="errors.phone"
+        :is-valid="isPhoneValid"
       />
 
       <div class="form-actions">

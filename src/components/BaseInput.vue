@@ -26,11 +26,11 @@ defineEmits<{
     <label v-if="label" class="input-label">{{ label }}</label>
     <div class="input-wrapper">
       <input
-          :type="type"
-          :value="modelValue"
-          :placeholder="placeholder"
-          :class="['form-control-custom', { 'has-error': !!errorMessage, 'is-valid': isValid && !errorMessage }]"
-          @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
+        :type="type"
+        :value="modelValue"
+        :placeholder="placeholder"
+        :class="['form-control-custom', { 'has-error': !!errorMessage, 'is-valid': isValid && !errorMessage }]"
+        @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       />
       <span v-if="isValid && !errorMessage" class="valid-icon">&#10003;</span>
     </div>

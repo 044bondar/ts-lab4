@@ -19,10 +19,10 @@ watch(searchQuery, (newValue) => {
 <template>
   <div class="search-bar">
     <input
-        v-model="searchQuery"
-        type="text"
-        placeholder="Пошук за іменем..."
-        class="search-input"
+      v-model="searchQuery"
+      type="text"
+      placeholder="Пошук за іменем..."
+      class="search-input"
     />
   </div>
 </template>
